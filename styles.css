@@ -1,12 +1,13 @@
 body {
-  font-style: normal;
   height: 100vh;
-  background-color: #c9c9c9;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   font-family: 'Creepster', cursive;
+  color: #d1d1d6;
+  font-size: 3rem;
+  background-color: #383838;
 }
 
 .form-container {
@@ -15,20 +16,19 @@ body {
   justify-content: center;
   height: 90vh;
   width: 100%;
-  border: 4px solid white;
 }
 
 aside {
   width: 20%;
   height: 100%;
-  border: 2px solid black;
+  border: 2px solid #a1a1a1;
   display: flex;
   flex-direction: column;
 }
 
 .player1-score-wrapper,
 .player2-score-wrapper {
-  border: 2px solid red;
+  border: 2px solid #a1a1a1;
   height: 10rem;
   width: 100%;
   display: flex;
@@ -41,7 +41,7 @@ aside {
 }
 
 .grid-1 {
-  border: 2px solid red;
+  border: 2px solid #a1a1a1;
   height: 40rem;
   width: 100%
 }
@@ -51,7 +51,7 @@ aside {
 }
 
 .grid-2 {
-  border: 2px solid red;
+  border: 2px solid #a1a1a1;
   height: 40rem;
   width: 100%
 }
@@ -59,14 +59,14 @@ aside {
 .game-board-container {
   width: 40%;
   height: 100%;
-  border: 2px solid black;
+  border: 4px solid #a1a1a1;
   display: flex;
   flex-direction: column;
 }
 
 .game-board-header-wrapper {
   height: 20%;
-  border: 2px solid red;
+  border: 2px solid #a1a1a1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +78,7 @@ aside {
 
 .game-board-wrapper {
   height: 80%;
-  border: 2px solid red;
+  border: 2px solid #a1a1a1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,21 +86,30 @@ aside {
 }
 
 .game-board-grid {
-  height: 20rem;
-  width: 20rem;
-  border: 2px solid orange;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  /* height: 60%;
+  width: 20vh; */
+  /* border: 2px solid orange; */
+  /* display: flex; */
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+  /* flex-wrap: wrap; */
+  /* justify-content: center;
+  align-content: center; */
 
 }
 
 .cell {
-  height: 5rem;
-  width: 5rem;
-  border: 2px solid #16f755;
+  height: 10rem;
+  width: 10rem;
+  /* border: 2px solid #16f755; */
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+.spooky {
+  height: 100%;
+  width: 100%;
 }
