@@ -1,0 +1,106 @@
+body {
+  font-style: normal;
+  height: 100vh;
+  background-color: #c9c9c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: 'Creepster', cursive;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 90vh;
+  width: 100%;
+  border: 4px solid white;
+}
+
+aside {
+  width: 20%;
+  height: 100%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.player1-score-wrapper,
+.player2-score-wrapper {
+  border: 2px solid red;
+  height: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player1-score-header {
+  border: 2px solid orange;
+}
+
+.grid-1 {
+  border: 2px solid red;
+  height: 40rem;
+  width: 100%
+}
+
+.player2-score-header {
+  border: 2px solid orange;
+}
+
+.grid-2 {
+  border: 2px solid red;
+  height: 40rem;
+  width: 100%
+}
+
+.game-board-container {
+  width: 40%;
+  height: 100%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-board-header-wrapper {
+  height: 20%;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-board-header {
+  border: 2px solid orange;
+}
+
+.game-board-wrapper {
+  height: 80%;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-board-grid {
+  height: 20rem;
+  width: 20rem;
+  border: 2px solid orange;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.cell {
+  height: 5rem;
+  width: 5rem;
+  border: 2px solid #16f755;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
