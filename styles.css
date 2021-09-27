@@ -14,7 +14,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 90vh;
+  height: 75vh;
   width: 100%;
 }
 
@@ -29,25 +29,30 @@ aside {
 .player1-score-wrapper,
 .player2-score-wrapper {
   border: 2px solid #a1a1a1;
-  height: 10rem;
+  height: 25rem;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.player1-score-header {
-  border: 2px solid orange;
+.player1-score-header, 
+.player2-score-header {
+  font-size: 3.5rem;
+  text-align: center;
+
+}
+
+.player1-score, 
+.player2-score {
+  font-size: 7rem;
 }
 
 .grid-1 {
   border: 2px solid #a1a1a1;
   height: 40rem;
   width: 100%
-}
-
-.player2-score-header {
-  border: 2px solid orange;
 }
 
 .grid-2 {
@@ -65,7 +70,7 @@ aside {
 }
 
 .game-board-header-wrapper {
-  height: 20%;
+  height: 35%;
   border: 2px solid #a1a1a1;
   display: flex;
   justify-content: center;
@@ -73,11 +78,12 @@ aside {
 }
 
 .game-board-header {
-  border: 2px solid orange;
+  font-size: 5.5rem;
+  text-align: center;
 }
 
 .game-board-wrapper {
-  height: 80%;
+  height: 65%;
   border: 2px solid #a1a1a1;
   display: flex;
   flex-direction: column;
@@ -86,30 +92,29 @@ aside {
 }
 
 .game-board-grid {
-  /* height: 60%;
-  width: 20vh; */
-  /* border: 2px solid orange; */
-  /* display: flex; */
+  height: 30rem;
+  width: 30rem;
+  display: flex;
   display: grid;
-  grid-gap: 1px;
   grid-template-columns: repeat(3, 1fr);
-  /* flex-wrap: wrap; */
-  /* justify-content: center;
-  align-content: center; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 
 }
 
 .cell {
   height: 10rem;
   width: 10rem;
-  /* border: 2px solid #16f755; */
-  font-size: 2rem;
+  border: 2px solid black;
   display: flex;
   justify-content: center;
   align-content: center;
+  background: transparent;
 }
 
-.spooky {
-  height: 100%;
-  width: 100%;
-}
+.ghost, 
+.black-cat {
+   height: 100%;
+   width: 100%;
+ }
