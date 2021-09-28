@@ -5,10 +5,13 @@ class Player {
     this.score = 0;
 
   }
-  // saveWinsToStorage() {
-
-  // }
-  // retrieveWinsFromStorage() {
-
- // }
+  savePlayersToStorage(array) {
+    var stringifiedPlayers = JSON.stringify(array);
+    localStorage.setItem('stringifiedPlayers', stringifiedPlayers);
+  };
+  retrievePlayersFromStorage() {
+    var retrievedPlayers = localStorage.getItem('stringifiedPlayers');
+    var parsedPlayers = JSON.parse(retrievedPlayers);
+    return parsedPlayers;
+  };
 };
