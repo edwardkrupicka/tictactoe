@@ -1,8 +1,8 @@
 class Player {
-  contructor(name, token) {
-    this.name = player1;
-    this.wins = 0;
-    this.token = token
+  constructor(name, token) {
+    this.name = name;
+    this.token = token;
+    this.score = 0;
 
   }
   // saveWinsToStorage() {

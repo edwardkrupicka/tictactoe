@@ -10,10 +10,11 @@
   </head>
   <body>
     <main class="form-container">
-      <aside class="left-form-container">
+      <aside class="score-form-container">
+        <img class="icon-header" src="assets/ghost.svg" alt="ghost.svg">
         <div class="player1-score-wrapper">
-          <header class="player1-score-header">Player 1 Score</header>
-          <header class="player1-score">0</header>
+          <header class="player1-score-header">Casper the Ghost's Score</header>
+          <header class="player1-score" id="player1-score">0</header>
           </header>
         </div>
         <section class="grid-1"></section>
@@ -22,24 +23,26 @@
         <div class="game-board-header-wrapper">
           <header class="game-board-header">Ghost-Cat-Boo</header>
         </div>
-        <section class="game-board-wrapper">
+        <div class="game-board-wrapper">
+          <header class="player-turn-header" id="player-turn-header">Ghost's turn!</header>
           <div class="game-board-grid" id="game-board-grid">
-            <button class="cell cell-0"></button>
-            <button class="cell cell-1"></button>
-            <button class="cell cell-2"></button>
-            <button class="cell cell-3"></button>
-            <button class="cell cell-4"></button>
-            <button class="cell cell-5"></button>
-            <button class="cell cell-6"></button>
-            <button class="cell cell-7"></button>
-            <button class="cell cell-8"></button>
+            <button class="quadrant quadrant-0" id="0"></button>
+            <button class="quadrant quadrant-1" id="1"></button>
+            <button class="quadrant quadrant-2" id="2"></button>
+            <button class="quadrant quadrant-3" id="3"></button>
+            <button class="quadrant quadrant-4" id="4"></button>
+            <button class="quadrant quadrant-5" id="5"></button>
+            <button class="quadrant quadrant-6" id="6"></button>
+            <button class="quadrant quadrant-7" id="7"></button>
+            <button class="quadrant quadrant-8" id="8"></button>
           </div>
-        </section>
+        </div>
       </section>
-      <aside class="right-form-container">
+      <aside class="score-form-container">
+        <img class="icon-header" src="assets/black-cat.svg" alt="black-cat.svg">
         <div class="player2-score-wrapper">
-          <header class="player2-score-header">Player 2 Score</header>
-          <header class="player2-score">0</header>
+          <header class="player2-score-header">Salem the Cat's Score</header>
+          <header class="player2-score" id="player2-score">0</header>
         </div>
         <section class="section grid-2"></section>
       </aside>

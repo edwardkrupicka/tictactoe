@@ -14,7 +14,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 75vh;
+  height: 60vh;
   width: 100%;
 }
 
@@ -26,15 +26,28 @@ aside {
   flex-direction: column;
 }
 
+.score-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.icon-header {
+  height: 30%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .player1-score-wrapper,
 .player2-score-wrapper {
-  border: 2px solid #a1a1a1;
-  height: 25rem;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+
 }
 
 .player1-score-header, 
@@ -49,18 +62,6 @@ aside {
   font-size: 7rem;
 }
 
-.grid-1 {
-  border: 2px solid #a1a1a1;
-  height: 40rem;
-  width: 100%
-}
-
-.grid-2 {
-  border: 2px solid #a1a1a1;
-  height: 40rem;
-  width: 100%
-}
-
 .game-board-container {
   width: 40%;
   height: 100%;
@@ -70,7 +71,7 @@ aside {
 }
 
 .game-board-header-wrapper {
-  height: 35%;
+  height: 20%;
   border: 2px solid #a1a1a1;
   display: flex;
   justify-content: center;
@@ -78,43 +79,82 @@ aside {
 }
 
 .game-board-header {
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   text-align: center;
 }
 
 .game-board-wrapper {
-  height: 65%;
+  height: 80%;
   border: 2px solid #a1a1a1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.player-turn-header {
+  margin-bottom: 2vh;
 }
 
 .game-board-grid {
-  height: 30rem;
-  width: 30rem;
+  height: 100%%;
+  width: 50%;
   display: flex;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-
+  position: relative;
 }
 
-.cell {
-  height: 10rem;
-  width: 10rem;
-  border: 2px solid black;
+.quadrant {
+  width: 32%;
+  height: 32%;
+  padding-bottom: 32%;
+  position: relative;
+  border: 2px solid #a1a1a1;
   display: flex;
+  background-color: transparent;
   justify-content: center;
-  align-content: center;
-  background: transparent;
+}
+
+.quadrant-0 {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+.quadrant-1 {
+  border-top-color: transparent;
+}
+
+.quadrant-2 {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.quadrant-3 {
+  border-left-color: transparent;
+}
+
+.quadrant-5 {
+  border-right-color: transparent;
+}
+
+.quadrant-6 {
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.quadrant-7 {
+  border-bottom-color: transparent;
+}
+
+.quadrant-8 {
+  border-bottom-color: transparent;
+  border-right-color: transparent;
 }
 
 .ghost, 
 .black-cat {
-   height: 100%;
-   width: 100%;
+  height: 85%;
+  width: 100%;
+  position: absolute;
+  margin-top: 5px;
  }
