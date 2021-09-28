@@ -14,7 +14,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 60vh;
+  height: 85vh;
   width: 100%;
 }
 
@@ -97,8 +97,7 @@ aside {
 }
 
 .game-board-grid {
-  height: 100%%;
-  width: 50%;
+  width: 65%;
   display: flex;
   flex-wrap: wrap;
   position: relative;

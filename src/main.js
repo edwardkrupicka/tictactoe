@@ -2,10 +2,10 @@
 var game = new Game();
 var gameBoardGrid = document.getElementById('game-board-grid');
 var quadrants = document.querySelectorAll('.quadrant');
-var playerScoreHeader = document.getElementById('player-turn-header');
 
 
 // Event Listeners go here 👇🏽
+window.addEventListener('load', retrieveSavedScores);
 gameBoardGrid.addEventListener('click', detectGridClick);
 
 //Functions go here 👇🏽
@@ -13,9 +13,8 @@ gameBoardGrid.addEventListener('click', detectGridClick);
 
 
 function detectGridClick(event) {
-  console.log(game.currentPlayer);
   insertIcon(event);
-  updateHeaders();
+  updateScoreHeader();
   var winningPlayer = game.checkForWin();
   declareWinner(winningPlayer);
 };
@@ -26,12 +25,14 @@ function insertIcon(event) {
       game.turnsTaken = 0;
       return;
     }
-    else if(event.target.classList.contains('quadrant') && game.currentPlayer === game.playerOne) {
+    else if(event.target.classList.contains('quadrant') && 
+            game.currentPlayer === game.playerOne) {
       event.target.innerHTML += `<img class="ghost" src="assets/ghost.svg" alt="ghost.svg">`;
       event.target.disabled = true;
       game.turnsTaken++;
       game.addToBoard(quadrantID);
-  } else if(event.target.classList.contains('quadrant') && game.currentPlayer === game.playerTwo) {
+  } else if(event.target.classList.contains('quadrant') && 
+            game.currentPlayer === game.playerTwo) {
       event.target.innerHTML += `<img class="black-cat" src="assets/black-cat.svg" alt="black-cat.svg">`;
       event.target.disabled = true;
       game.turnsTaken++;
@@ -41,13 +42,13 @@ function insertIcon(event) {
 
 };
 
-function updateHeaders() {
+function updateScoreHeader() {
+  var playerScoreHeader = document.getElementById('player-turn-header');
   playerScoreHeader.innerHTML = `${game.currentPlayer.token}'s turn!`;
   };
 
   function declareWinner(winningPlayer) {
-    console.log(winningPlayer);
-    console.log('declare winner');
+    var playerScoreHeader = document.getElementById('player-turn-header');
     var player1score = document.getElementById('player1-score');
     var player2score = document.getElementById('player2-score');
     if(winningPlayer) {
@@ -64,7 +65,6 @@ function updateHeaders() {
   };
 
   function clearBoard() {
-    console.log('clear board')
     var playerScoreHeader = document.getElementById('player-turn-header');
     for(var i = 0; i < quadrants.length; i++) {
       quadrants[i].innerHTML = "";
@@ -72,4 +72,12 @@ function updateHeaders() {
     }
     playerScoreHeader.innerHTML = `${game.currentPlayer.token}'s turn!`;
     gameBoardGrid.addEventListener('click', detectGridClick);
+  };
+
+  function retrieveSavedScores() {
+    var player1score = document.getElementById('player1-score');
+    var player2score = document.getElementById('player2-score');
+    game.retrieveScores();
+    player1score.innerHTML = game.playerOne.score;
+    player2score.innerHTML = game.playerTwo.score;
   };
