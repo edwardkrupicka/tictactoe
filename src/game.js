@@ -10,8 +10,10 @@ class Game {
 
   retrieveScores() {
     var parsedPlayers = this.playerOne.retrievePlayersFromStorage();
-    this.playerOne.score = parsedPlayers[0].score;
-    this.playerTwo.score = parsedPlayers[1].score;
+    if (parsedPlayers) {
+      this.playerOne.score = parsedPlayers[0].score;
+      this.playerTwo.score = parsedPlayers[1].score;
+    }
   }
 
   changeCurrentPlayer() {
@@ -44,9 +46,7 @@ class Game {
           this.turnsTaken = 0;
           this.playerOne.score++;
           this.savedPlayers = [this.playerOne, this.playerTwo];
-          console.log(this.savedPlayers);
           this.playerOne.savePlayersToStorage(this.savedPlayers);
-          console.log(localStorage);
           this.board = ['', '', '', '', '', '', '', '', ''];
           return this.playerOne;
       } else if(this.board[winConditions[i][0]] === this.playerTwo.token && 
@@ -55,9 +55,7 @@ class Game {
             this.turnsTaken = 0;
             this.playerTwo.score++;
             this.savedPlayers = [this.playerOne, this.playerTwo];
-            console.log(this.savedPlayers);
             this.playerTwo.savePlayersToStorage(this.savedPlayers);
-            console.log(localStorage);
             this.board = ['', '', '', '', '', '', '', '', ''];
             return this.playerTwo;
         } else if(this.turnsTaken === 9) {
@@ -66,5 +64,11 @@ class Game {
           }
 
     }
+  };
+  clearLocalStorage() {
+    localStorage.clear();
+    this.board = ['', '', '', '', '', '', '', '', ''];
+    this.playerOne.score = 0;
+    this.playerTwo.score = 0;
   };
 };
