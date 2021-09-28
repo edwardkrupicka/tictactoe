@@ -2,12 +2,13 @@
 var game = new Game();
 var gameBoardGrid = document.getElementById('game-board-grid');
 var quadrants = document.querySelectorAll('.quadrant');
+var resetButton = document.getElementById('reset-button');
 
 
 // Event Listeners go here 👇🏽
 window.addEventListener('load', retrieveSavedScores);
 gameBoardGrid.addEventListener('click', detectGridClick);
-
+resetButton.addEventListener('click', resetGame);
 //Functions go here 👇🏽
 
 
@@ -78,6 +79,15 @@ function updateScoreHeader() {
     var player1score = document.getElementById('player1-score');
     var player2score = document.getElementById('player2-score');
     game.retrieveScores();
+    player1score.innerHTML = game.playerOne.score;
+    player2score.innerHTML = game.playerTwo.score;
+  };
+
+  function resetGame() {
+    var player1score = document.getElementById('player1-score');
+    var player2score = document.getElementById('player2-score');
+    game.clearLocalStorage();
+    clearBoard();
     player1score.innerHTML = game.playerOne.score;
     player2score.innerHTML = game.playerTwo.score;
   };
