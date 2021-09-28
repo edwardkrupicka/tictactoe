@@ -7,6 +7,12 @@ body {
   font-family: 'Creepster', cursive;
   color: #d1d1d6;
   font-size: 3rem;
+  text-shadow:
+  4px 4px 0 #000,
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
   background-color: #383838;
 }
 
@@ -15,15 +21,18 @@ body {
   flex-direction: row;
   justify-content: center;
   height: 85vh;
-  width: 100%;
+  width: 100vw;
 }
 
 aside {
   width: 20%;
-  height: 100%;
+  height: 85vh;
   border: 2px solid #a1a1a1;
   display: flex;
   flex-direction: column;
+  background-color: #2a2a2a;
+  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23383838' fill-opacity='0.74' fill-rule='evenodd'/%3E%3C/svg%3E");
+  
 }
 
 .score-form-container {
@@ -64,8 +73,7 @@ aside {
 
 .game-board-container {
   width: 40%;
-  height: 100%;
-  border: 4px solid #a1a1a1;
+  height: 85.4vh;
   display: flex;
   flex-direction: column;
 }
@@ -73,6 +81,7 @@ aside {
 .game-board-header-wrapper {
   height: 20%;
   border: 2px solid #a1a1a1;
+  border-bottom-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,15 +98,15 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .player-turn-header {
-  margin-bottom: 2vh;
+  margin-top: 5%;
 }
 
 .game-board-grid {
-  width: 65%;
+  width: 22vw;
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -159,7 +168,43 @@ aside {
  }
 
  .reset-button {
-   height: 5%;
-   width: 25%;
-   border-radius: 5px;
- }
+ width: 12vw;
+ height: 8%;
+ margin-bottom: 5%;
+ margin-right: 18px;
+ color: orange;
+ background-color: transparent;
+ border: none;
+ border-radius: 8px;
+ transition: ease-out 0.3s;
+ font-size: 1.5vw;
+ font-family: 'Creepster', cursive;
+ outline: none;
+ border: 5px solid orange;
+ position: relative;
+}
+
+.reset-button:hover {
+  background-color: orange;
+  color: black;
+  border-color: black;
+  cursor: pointer;
+}
+
+.reset-button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: orange;
+}
+
+.reset-button:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+}
