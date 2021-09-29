@@ -33,7 +33,7 @@
 
 * Fixing random bugs at one in the morning. Coding till the late hours of the night proved to waste more time than solve issues. Eventually I started coding in the morning and realized I am much more productive after a good nights rest.
 
-* Creating my win conditional took a lot of trial and error. I had no idea how to approach it at first and knew I couldn't very far until I made it past that obstacle.
+* Creating my win conditional took a lot of trial and error. I had no idea how to approach it at first and knew I couldn't get very far until I made it past that obstacle.
 
 ### Bugs
 
