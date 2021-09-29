@@ -54,3 +54,5 @@
 
 ### Resources:
 #### My final product https://edwardkrupicka.github.io/tictactoe/
+
+### Rubric https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo.html
