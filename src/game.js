@@ -58,17 +58,19 @@ class Game {
             this.playerTwo.savePlayersToStorage(this.savedPlayers);
             this.board = ['', '', '', '', '', '', '', '', ''];
             return this.playerTwo;
-        } else if(this.turnsTaken === 9) {
-            this.board = ['', '', '', '', '', '', '', '', ''];
-              return null;
-          }
-
+        } 
     }
-  };
+    if(this.turnsTaken === 9) {
+      this.board = ['', '', '', '', '', '', '', '', ''];
+      return null;
+    }
+};
   clearLocalStorage() {
     localStorage.clear();
     this.board = ['', '', '', '', '', '', '', '', ''];
     this.playerOne.score = 0;
     this.playerTwo.score = 0;
+    this.turnsTaken = 0;
+    this.currentPlayer = this.playerOne;
   };
 };

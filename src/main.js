@@ -22,7 +22,7 @@ function detectGridClick(event) {
 
 function insertIcon(event) {
   var quadrantID = event.target.id;
-    if(game.turnsTaken >= 9) {
+    if(game.turnsTaken > 9) {
       game.turnsTaken = 0;
       return;
     }
@@ -57,11 +57,11 @@ function updateScoreHeader() {
       player1score.innerHTML = game.playerOne.score;
       player2score.innerHTML = game.playerTwo.score;
       gameBoardGrid.removeEventListener('click', detectGridClick);
-      setTimeout(clearBoard, 2000);
+      setTimeout(clearBoard, 1500);
     } else if(!winningPlayer && game.turnsTaken === 9) {
       playerScoreHeader.innerHTML = `Draw!`
       gameBoardGrid.removeEventListener('click', detectGridClick);
-      setTimeout(clearBoard, 2000);
+      setTimeout(clearBoard, 1500);
     }
   };
 
