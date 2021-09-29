@@ -13,7 +13,13 @@ body {
   1px -1px 0 #000,
   -1px 1px 0 #000,
   1px 1px 0 #000;
-  background-color: #383838;
+  background-color: #090909;
+    background-image:url('/assets/spooky.jpeg');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-container {
@@ -30,8 +36,7 @@ aside {
   border: 2px solid #a1a1a1;
   display: flex;
   flex-direction: column;
-  background-color: #2a2a2a;
-  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23383838' fill-opacity='0.74' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-color: rgba(0, 0, 0, 0.4);
   
 }
 
@@ -61,14 +66,21 @@ aside {
 
 .player1-score-header, 
 .player2-score-header {
-  font-size: 3.5rem;
+  font-size: 6vh;
   text-align: center;
 
 }
 
 .player1-score, 
 .player2-score {
-  font-size: 7rem;
+  font-size: 10vh;
+  color: orange;
+  text-shadow: 
+  4px 4px 0 rgb(157, 0, 255),
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 }
 
 .game-board-container {
@@ -76,6 +88,7 @@ aside {
   height: 85.4vh;
   display: flex;
   flex-direction: column;
+  background-color: rgb(31, 31, 31, 0);
 }
 
 .game-board-header-wrapper {
@@ -88,13 +101,21 @@ aside {
 }
 
 .game-board-header {
-  font-size: 4.5rem;
+  font-size: 10vh;
   text-align: center;
+  color: rgb(8, 8, 8);
+  text-shadow:
+  4px 4px 0 rgb(27, 205, 0),
+  -1px -1px 0 rgb(27, 205, 0),  
+  1px -1px 0 rgb(27, 205, 0),
+  -1px 1px 0 rgb(27, 205, 0),
+  1px 1px 0 rgb(27, 205, 0);
 }
 
 .game-board-wrapper {
   height: 80%;
   border: 2px solid #a1a1a1;
+  border-top-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +123,15 @@ aside {
 }
 
 .player-turn-header {
-  margin-top: 5%;
+  font-size: 6vh;
+  margin-bottom: 1vh;
+  color: orange;
+  text-shadow:
+  4px 4px 0 rgb(107, 0, 164),
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 }
 
 .game-board-grid {
@@ -117,7 +146,7 @@ aside {
   height: 32%;
   padding-bottom: 32%;
   position: relative;
-  border: 2px solid #a1a1a1;
+  border: 2px solid #d0d0d0;
   display: flex;
   background-color: transparent;
   justify-content: center;
@@ -187,7 +216,7 @@ aside {
 .reset-button:hover {
   background-color: orange;
   color: black;
-  border-color: black;
+  border-color: rgb(169, 0, 225);
   cursor: pointer;
 }
 
@@ -208,3 +237,16 @@ aside {
   left: 0;
   right: 0;
 }
+
+audio {
+  margin-top: 20px;
+  height: 3vh;
+  width: 15vw;
+}
+
+audio::-webkit-media-controls-panel{
+  background-color: rgb(113, 113, 113);
+}
+
+
+
