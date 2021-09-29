@@ -46,3 +46,4 @@
 
 * Implement a secret function that runs when either player score reaches an unspecified number.
 
+* Build a function that predicts a draw.
