@@ -21,7 +21,11 @@
 
   * Player scores are displayed under their icon and are pushed to local storage so it persits on page reload.
 
+  * Board times out and clears after a round is completed.
+
   * Press the 'Start New Game' button and it clears local storage and resets the game board.
+
+  * Last but not least a hidden but not so hidden feature.
 
 ### Wins
 * The CSS! I had a lot of fun playing with the CSS this project. Figuring out how to use Flex Box and get everything to resize properly was a fun challenge. I have grown alot since the beginning of Mod 1 and this being a solo project I had a lot of creative freedom!
