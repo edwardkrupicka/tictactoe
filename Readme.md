@@ -49,5 +49,4 @@
 * Build a function that predicts a draw.
 
 ### Resources:
-#### ### Resources:
 #### [Deploy Link]https://edwardkrupicka.github.io/tictactoe/
