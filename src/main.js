@@ -1,7 +1,6 @@
 // Query Selectors go here 👇🏽
 var game = new Game();
 var gameBoardGrid = document.getElementById('game-board-grid');
-var quadrants = document.querySelectorAll('.quadrant');
 var resetButton = document.getElementById('reset-button');
 
 
@@ -22,7 +21,7 @@ function detectGridClick(event) {
 
 function insertIcon(event) {
   var quadrantID = event.target.id;
-    if(game.turnsTaken > 9) {
+    if(game.turnsTaken >= 9) {
       game.turnsTaken = 0;
       return;
     }
@@ -53,19 +52,20 @@ function updateScoreHeader() {
     var player1score = document.getElementById('player1-score');
     var player2score = document.getElementById('player2-score');
     if(winningPlayer) {
+      gameBoardGrid.removeEventListener('click', detectGridClick);
+      setTimeout(clearBoard, 1500);
       playerScoreHeader.innerHTML = `${winningPlayer.token} wins!`;
       player1score.innerHTML = game.playerOne.score;
       player2score.innerHTML = game.playerTwo.score;
+    } else if(!winningPlayer && game.turnsTaken >= 9) {
       gameBoardGrid.removeEventListener('click', detectGridClick);
       setTimeout(clearBoard, 1500);
-    } else if(!winningPlayer && game.turnsTaken === 9) {
       playerScoreHeader.innerHTML = `Draw!`
-      gameBoardGrid.removeEventListener('click', detectGridClick);
-      setTimeout(clearBoard, 1500);
     }
   };
 
   function clearBoard() {
+    var quadrants = document.querySelectorAll('.quadrant');
     var playerScoreHeader = document.getElementById('player-turn-header');
     for(var i = 0; i < quadrants.length; i++) {
       quadrants[i].innerHTML = "";
