@@ -1,10 +1,6 @@
 # 🎃  Tic Tac Toe  🎃
-
-### Resources:
   
   #### My final product https://edwardkrupicka.github.io/tictactoe/
-
-  #### Rubric https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo.html
 
   #### A Front End Development Project by [Edward Krupicka](https://github.com/edwardkrupicka)
  
@@ -57,3 +53,7 @@
 * Implement a secret function that runs when either player score reaches an unspecified number.
 
 * Build a function that predicts a draw.
+
+### Resources:
+
+  #### Rubric https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo.html
